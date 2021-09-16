@@ -14,4 +14,28 @@ const config: PluginConfig = {
 
 console.log(config)
 
+interface Employeese {
+	[key: string]: number
+}
+
+const employeese: Employeese = {
+	mango: 5,
+	poly: 10,
+	ajax: 20,
+	wiki: 50,
+}
+
+const entries = Object.entries(employeese)
+
+let bestEmployeeName = ''
+let bestEmployeeProIndex = 0
+
+for (const [name, value] of entries) {
+	if (bestEmployeeProIndex <= value) {
+		bestEmployeeName = name
+	}
+}
+
+console.log(bestEmployeeName)
+
 export {}
